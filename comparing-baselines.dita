@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- This document was created with Syntext Serna Free. --><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd" []>
+<task xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="task-1" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd:1.1">
+  <title>How to compare baselines?</title>
+  <shortdesc>Comparing baselines will answer the question: &quot;What version etc. changes has happened to the objects that are member of two (or more) baselines.&quot;</shortdesc>
+  <taskbody>
+    <steps>
+      <step>
+        <cmd>Go to an object that is in both baselines</cmd>
+      </step>
+      <step>
+        <cmd>Select Related Objects &gt; Baselines</cmd>
+        <info>
+          <fig>
+            <image href="http://placehold.it/800x500.jpg"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Select 2 or more baselines and click the Compare icon</cmd>
+        <info>
+          <fig>
+            <image href="http://placehold.it/600x400.gif"/>
+          </fig>
+        </info>
+        <stepxmp/>
+        <stepresult>
+          <fig>
+            <image href="images/baseline-compare/Slide5.png"/>
+          </fig>
+        </stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>
