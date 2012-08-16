@@ -10,7 +10,7 @@ An opinionated ongoing experiment on how to avoid building DITA franken-books by
 
 Built incrementally one user story at a time:
 
-* HelloWorld, a classical minimal example. Output from just one single DITA `task`. This does unfortunately *NOT* illustrate the main point of assembling several DITA topics into more meaningful pages.  Still it demonstrates the **adjustable terseness** feature dita-bootstrapped provides ... and it gets us of the ground ;-)
+* [HelloWorld](http://jornh.github.com/dita-bootstrapped/comparing-baselines.html), a classical minimal example. Output from just one single DITA `task`. This does unfortunately *NOT* illustrate the main point of assembling several DITA topics into more meaningful pages.  Still it demonstrates the **adjustable terseness** feature dita-bootstrapped provides ... and it gets us of the ground ;-)
 
 * *To be continued...*
 
