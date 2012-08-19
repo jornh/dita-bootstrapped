@@ -12,7 +12,9 @@ Built incrementally one user story at a time:
 
 * [HelloWorld](http://jornh.github.com/dita-bootstrapped/comparing-baselines.html), a classical minimal example. Output from just one single DITA `task`. This does unfortunately *NOT* illustrate the main point of assembling several DITA topics into more meaningful pages.  Still it demonstrates the **adjustable terseness** feature dita-bootstrapped provides ... and it gets us of the ground ;-)
 
-* *To be continued...*
+* Recipe for stepwise refactoring existing DITA sources to get them *Bootstrap-ified* by: 1) `.ditamap` tweaks 2) breaking up `section`s etc. in big files, 3) adding `shortdesc` based progressive disclosure for findability
+
+* *To be continued...* but you can participate by adding or fixing issues or just forking this thing and scratch your own itches
 
 ## How to build your own
 
