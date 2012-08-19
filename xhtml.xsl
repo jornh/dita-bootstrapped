@@ -56,7 +56,6 @@
 <!-- JHE TODO XXX TBD temp remove addition -->
         <!-- <xsl:call-template name="cssMeta"/> -->
 <!-- JHE addition -->
-<!-- <link href="file:///C:/Users/jhe/temp/bootstrap- DUUUHHHHHHHHHHHHHHHH -full/css/bootstrap.css" rel="stylesheet" /> -->
 <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css" rel="stylesheet" />
 <link href="http://fancyapps.com/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
 
@@ -127,7 +126,10 @@
         $("div.fig").slideToggle();
         $("div.info").slideToggle();
         $("div.tutorialinfo").slideToggle();
+        $("div.stepxmp").slideToggle();
         $("div.stepresult").slideToggle();
+        $("ol.substeps").slideToggle();
+        $("ul.choices").slideToggle();
       });
 
       /* from fancybox page ref to http://jsfiddle.net/47xjk/  */
