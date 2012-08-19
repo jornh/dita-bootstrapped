@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Specialized topic types</title>
+      <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css" rel="stylesheet" />
+      <link href="http://fancyapps.com/fancybox/source/jquery.fancybox.css" rel="stylesheet" /><style type="text/css">
+      body {
+        position: relative;
+        padding-top: 60px; /* adjust for navbar */
+      }
+      h2 {
+        padding-top: 60px; /* adjust for navbar */
+      }
+    </style><meta name="generator" content="XMLmind DITA Converter 2.2.1" />
+   </head>
+   <body>
+      <div class="navbar navbar-fixed-top">
+         <div class="navbar-inner">
+            <div class="container">
+               <p><button class="btn btn-inverse pull-right">Toggle: Just facts/details</button></p>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="page-navigation-bar">
+            <table border="0" cellspacing="0" width="100%" class="page-navigation-layout">
+               <tr valign="top">
+                  <td align="left"><a href="index.html" class="navigation-link" title="First page: DITA for the Impatient" accesskey="S"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/first.png" alt="First page" width="16" height="16" /></a></td>
+                  <td align="left"><a href="topic.html" class="navigation-link" title="Previous page: The topic element" accesskey="P"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/previous.png" alt="Previous page" width="16" height="16" /></a></td>
+                  <td width="25%" align="left"><span class="page-navigation-previous">The topic element</span></td>
+                  <td width="40%" align="center"><span class="page-navigation-current">Specialized topic types</span> <span class="page-navigation-page">(3 / 5)</span></td>
+                  <td width="25%" align="right"><span class="page-navigation-next">Topic maps</span></td>
+                  <td align="right"><a href="index-2.html" class="navigation-link" title="Next page: Topic maps" accesskey="N"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/next.png" alt="Next page" width="16" height="16" /></a></td>
+                  <td align="right"><a href="index-3.html" class="navigation-link" title="Last page: Conclusion" accesskey="E"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/last.png" alt="Last page" width="16" height="16" /></a></td>
+               </tr>
+            </table>
+            <hr class="page-navigation-top-separator" />
+         </div>
+         <div class="row">
+            <div id="specialized_topics" class="span12">
+               <h2 class="section2-title">Specialized topic types</h2>
+               <div class="conbody">
+                  <div class="p">The <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topic.html" class="xref" target="_blank"><tt class="tt">topic</tt></a> element is the most generic topic
+                     type. There are four more specialized topic types: <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/concept.html" class="xref" target="_blank"><tt class="tt">concept</tt></a>, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/task.html" class="xref" target="_blank"><tt class="tt">task</tt></a>, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/reference.html" class="xref" target="_blank"><tt class="tt">reference</tt></a>, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/glossentry.html" class="xref" target="_blank"><tt class="tt">glossentry</tt></a>. When appropriate, use a
+                     specialized topic type rather than a plain <tt class="tt">topic</tt>.
+                  </div>
+               </div>
+               <div class="unordered-members-linkpool">
+                  <p class="link">‣ <span class="parent-topic-link-item">Parent topic: </span><a href="index.html#about_topics_and_maps">About topics and maps</a></p>
+               </div>
+               <div class="unordered-parent-linkpool">
+                  <h4 class="linkpool-title">Child topics: </h4>
+                  <p class="link">‣ <a href="#concept_element">The <tt class="tt">concept</tt> element</a></p>
+                  <p class="link">‣ <a href="#task_element">The <tt class="tt">task</tt> element</a></p>
+                  <p class="link">‣ <a href="#reference_element">The <tt class="tt">reference</tt> element</a></p>
+                  <p class="link">‣ <a href="#glossentry_element">The <tt class="tt">glossentry</tt> element</a></p>
+               </div>
+            </div>
+            <div id="concept_element" class="span8">
+               <h2 class="section3-title">The <tt class="tt">concept</tt> element
+               </h2>
+               <div class="body">
+                  <div class="p">Create a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/concept.html" class="xref" target="_blank"><tt class="tt">concept</tt></a> element when you need to provide
+                     your reader with background information which must be absorbed in order to
+                     understand the rest of the document.
+                  </div>
+                  <div class="p">Example:</div><pre class="pre">&lt;<b class="b">concept</b> id="what_is_a_cache"&gt;
+  &lt;<b class="b">title</b>&gt;What is a cache?&lt;/title&gt;
+
+  &lt;<b class="b">shortdesc</b>&gt;Everything you'll ever need to know about
+  &lt;term&gt;cache&lt;/term&gt;s.&lt;/shortdesc&gt;
+
+  &lt;<b class="b">conbody</b>&gt;
+    &lt;p&gt;In computer science, a cache is a temporary storage area where
+    frequently accessed data can be stored for rapid access.&lt;/p&gt;
+  &lt;/conbody&gt;
+
+  &lt;<b class="b">related-links</b>&gt;
+    &lt;link format="html" href="http://en.wikipedia.org/wiki/Cache"
+          scope="external"&gt;
+      &lt;linktext&gt;Wikipedia definition of a cache&lt;/linktext&gt;
+    &lt;/link&gt;
+  &lt;/related-links&gt;
+&lt;/concept&gt;</pre><div class="p">Notice how the structure of a <tt class="tt">concept</tt> element is similar to
+                     the structure of a <tt class="tt">topic</tt> element. Moreover, a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conbody.html" class="xref" target="_blank"><tt class="tt">conbody</tt></a> element has almost the same
+                     content model as a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/body.html" class="xref" target="_blank"><tt class="tt">body</tt></a> element.
+                  </div>
+                  <div class="p">The above example is rendered as follows:</div>
+               </div>
+            </div>
+            <div id="what_is_a_cache" class="JHE span4 concept">
+               <h2 class="section4-title">What is a cache?</h2>
+               <p class="shortdesc">Everything you'll ever need to know about
+                  <i class="term">cache</i>s.
+               </p>
+               <div class="conbody">
+                  <div class="p">In computer science, a cache is a temporary storage area where
+                     frequently accessed data can be stored for rapid access.
+                  </div>
+               </div>
+               <div class="related-links">
+                  <h3 class="related-links-title">Related information</h3>
+                  <p class="link">‣ <a href="http://en.wikipedia.org/wiki/Cache" target="_blank">Wikipedia definition of a cache</a></p>
+               </div>
+            </div>
+            <div id="task_element" class="span8">
+               <h2 class="section3-title">The <tt class="tt">task</tt> element
+               </h2>
+               <div class="body">
+                  <div class="p">Create a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/task.html" class="xref" target="_blank"><tt class="tt">task</tt></a> element when you need to explain
+                     step by step which procedure is to be followed in order to accomplish a
+                     given task.
+                  </div>
+                  <div class="p">Example:</div><pre class="pre">&lt;<b class="b">task</b> id="install_emacs"&gt;
+  &lt;title&gt;Installing GNU Emacs&lt;/title&gt;
+
+  &lt;<b class="b">taskbody</b>&gt;
+    &lt;<b class="b">prereq</b>&gt;Windows NT 4.0 or any subsequent version of Windows. 5Mb of free
+    disk space.&lt;/prereq&gt;
+
+    &lt;<b class="b">steps</b>&gt;
+      &lt;<b class="b">step</b>&gt;
+        &lt;<b class="b">cmd</b>&gt;Unzip the distribution anywhere.&lt;/cmd&gt;
+
+        &lt;<b class="b">info</b>&gt;We recommend to use the free, open source, &lt;xref format="html"
+        href="http://www.info-zip.org/" scope="external"&gt;Info-ZIP&lt;/xref&gt;
+        utility to do so.&lt;/info&gt;
+
+        &lt;<b class="b">stepxmp</b>&gt;&lt;screen&gt;C:\&amp;gt; unzip emacs-21.3-bin-i386.zip&lt;/screen&gt;&lt;/stepxmp&gt;
+
+        &lt;<b class="b">stepresult</b>&gt;&lt;p&gt;Doing this will create an
+        &lt;filepath&gt;emacs-21.3&lt;/filepath&gt; directory.&lt;/p&gt;&lt;/stepresult&gt;
+      &lt;/step&gt;
+
+      &lt;step&gt;
+        &lt;cmd&gt;Go to the bin subdirectory.&lt;/cmd&gt;
+
+        &lt;stepxmp&gt;&lt;screen&gt;C:\&amp;gt; cd emacs-21.3\bin&lt;/screen&gt;&lt;/stepxmp&gt;
+      &lt;/step&gt;
+
+      &lt;step&gt;
+        &lt;cmd&gt;Run &lt;cmdname&gt;addpm&lt;/cmdname&gt;.&lt;/cmd&gt;
+
+        &lt;stepxmp&gt;&lt;screen&gt;C:\emacs-21.3\bin&amp;gt; addpm&lt;/screen&gt;&lt;/stepxmp&gt;
+
+        &lt;stepresult&gt;A confirmation dialog box is displayed.&lt;fig&gt;
+            &lt;image href="confirm_install_emacs.png"/&gt;
+          &lt;/fig&gt;&lt;/stepresult&gt;
+      &lt;/step&gt;
+
+      &lt;step&gt;
+        &lt;cmd&gt;Click &lt;uicontrol&gt;OK&lt;/uicontrol&gt; to confirm.&lt;/cmd&gt;
+      &lt;/step&gt;
+    &lt;/steps&gt;
+  &lt;/taskbody&gt;
+&lt;/task&gt;</pre><div class="p">Albeit being the most complex specialized topic type, the <tt class="tt">task</tt>
+                     element is also the most useful one. Its <tt class="tt"><a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/taskbody.html" class="xref" target="_blank"><tt class="tt">taskbody</tt></a></tt> is mainly organized around
+                     the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/steps.html" class="xref" target="_blank"><tt class="tt">steps</tt></a> element. Other useful elements are
+                     <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prereq.html" class="xref" target="_blank"><tt class="tt">prereq</tt></a> (pre-requisite section of a task),
+                     <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/context.html" class="xref" target="_blank"><tt class="tt">context</tt></a> (background information for the
+                     task), <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/result.html" class="xref" target="_blank"><tt class="tt">result</tt></a> (expected outcome of a task).
+                  </div>
+                  <div class="p">The <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/step.html" class="xref" target="_blank"><tt class="tt">step</tt></a> element has several useful child
+                     elements other than the required <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/cmd.html" class="xref" target="_blank"><tt class="tt">cmd</tt></a> element: <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/info.html" class="xref" target="_blank"><tt class="tt">info</tt></a> (additional information about the
+                     step), <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/stepxmp.html" class="xref" target="_blank"><tt class="tt">stepxmp</tt></a> (example that illustrates a
+                     step), <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/substeps.html" class="xref" target="_blank"><tt class="tt">substeps</tt></a>, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/choices.html" class="xref" target="_blank"><tt class="tt">choices</tt></a> (the user needs to choose one of
+                     several actions), <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/stepresult.html" class="xref" target="_blank"><tt class="tt">stepresult</tt></a> (expected outcome of a
+                     step).
+                  </div>
+                  <div class="p">The above example is rendered as follows:</div>
+               </div>
+            </div>
+            <div id="install_emacs" class="JHE span4 task">
+               <h2 class="section4-title">Installing GNU Emacs</h2>
+               <div class="taskbody">
+                  <div id="install_emacs__I_ew8nf_" class="prereq">
+                     <h3 class="prereq-title">Before you begin</h3>Windows NT 4.0 or any subsequent version of Windows. 5Mb of free
+                     disk space.
+                  </div>
+                  <div class="steps">
+                     <h3 class="steps-title">Procedure</h3>
+                     <ol class="step-list">
+                        <li class="step"><span class="cmd">Unzip the distribution anywhere.</span><div class="info">We recommend to use the free, open source, <a href="http://www.info-zip.org/" class="xref" target="_blank">Info-ZIP</a>
+                              utility to do so.
+                           </div>
+                           <div class="stepxmp"><pre class="screen">C:\&gt; unzip emacs-21.3-bin-i386.zip</pre></div>
+                           <div class="stepresult">
+                              <div class="p">Doing this will create an
+                                 <tt class="filepath">emacs-21.3</tt> directory.
+                              </div>
+                           </div>
+                        </li>
+                        <li class="step"><span class="cmd">Go to the bin subdirectory.</span><div class="stepxmp"><pre class="screen">C:\&gt; cd emacs-21.3\bin</pre></div>
+                        </li>
+                        <li class="step"><span class="cmd">Run <b class="cmdname">addpm</b>.</span><div class="stepxmp"><pre class="screen">C:\emacs-21.3\bin&gt; addpm</pre></div>
+                           <div class="stepresult">A confirmation dialog box is displayed.
+                              <div id="install_emacs__I_3xwak_" class="fig">
+                                 <div class="image-container"><a href="img/confirm_install_emacs.png" rel="gallery"><img src="img/confirm_install_emacs.png" class="image" alt="confirm_install_emacs.png" /></a></div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="step"><span class="cmd">Click <b class="uicontrol">OK</b> to confirm.</span></li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+            <div id="reference_element" class="span8">
+               <h2 class="section3-title">The <tt class="tt">reference</tt> element
+               </h2>
+               <div class="body">
+                  <div class="p">Create a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/reference.html" class="xref" target="_blank"><tt class="tt">reference</tt></a> element when you need to add an
+                     entry to a reference manual. The <tt class="tt">reference</tt> element is typically
+                     used to document a command or a function.
+                  </div>
+                  <div class="p">Example:</div><pre class="pre">&lt;<b class="b">reference</b> id="pwd_command"&gt;
+  &lt;title&gt;The &lt;cmdname&gt;pwd&lt;/cmdname&gt; command&lt;/title&gt;
+
+  &lt;<b class="b">refbody</b>&gt;
+    &lt;<b class="b">refsyn</b>&gt;&lt;cmdname&gt;pwd&lt;/cmdname&gt;&lt;/refsyn&gt;
+
+    &lt;section&gt;&lt;title&gt;DESCRIPTION&lt;/title&gt;&lt;p&gt;Print the full filename of the
+    current working directory.&lt;/p&gt;&lt;note&gt;Your shell may have its own version of
+    &lt;cmdname&gt;pwd&lt;/cmdname&gt;, which usually supersedes the version described
+    here.&lt;/note&gt;&lt;/section&gt;
+
+    &lt;section&gt;&lt;title&gt;AUTHOR&lt;/title&gt;&lt;p&gt;Written by John Doe. &lt;/p&gt;&lt;/section&gt;
+  &lt;/refbody&gt;
+
+  &lt;related-links&gt;
+    &lt;link format="html" href="http://www.manpagez.com/man/3/getcwd/"
+          scope="external"&gt;
+      &lt;linktext&gt;&lt;cmdname&gt;getcwd&lt;/cmdname&gt;(3)&lt;/linktext&gt;
+    &lt;/link&gt;
+  &lt;/related-links&gt;
+&lt;/reference&gt;</pre><div class="p">The <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/refbody.html" class="xref" target="_blank"><tt class="tt">refbody</tt></a> child element of a
+                     <tt class="tt">reference</tt> can contain the following generic elements: <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/section.html" class="xref" target="_blank"><tt class="tt">section</tt></a>s, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/example.html" class="xref" target="_blank"><tt class="tt">example</tt></a>s, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/simpletable.html" class="xref" target="_blank"><tt class="tt">simpletable</tt></a>s and <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html" class="xref" target="_blank"><tt class="tt">table</tt></a>s but also more specific elements:
+                     <span class="xref"><tt class="tt">refsyn</tt></span> (contains the syntax of a command-line
+                     utility or the prototype of a function) and <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/properties.html" class="xref" target="_blank"><tt class="tt">properties</tt></a> (a special kind of table
+                     having 3 columns: type, value and description).
+                  </div>
+                  <div class="p">The above example is rendered as follows:</div>
+               </div>
+            </div>
+            <div id="pwd_command" class="JHE span4 reference">
+               <h2 class="section4-title">The <b class="cmdname">pwd</b> command
+               </h2>
+               <div class="refbody">
+                  <div id="pwd_command__I_aoiws_" class="refsyn"><b class="cmdname">pwd</b></div>
+                  <div id="pwd_command__I_a6lgj_" class="section">
+                     <h3 class="section-title">DESCRIPTION</h3>
+                     <div class="p">Print the full filename of the
+                        current working directory.
+                     </div>
+                     <div class="note"><span class="label">Note</span> <span class="note-body">Your shell may have its own version of
+                           <b class="cmdname">pwd</b>, which usually supersedes the version described
+                           here.</span></div>
+                  </div>
+                  <div id="pwd_command__I_jrbx8_" class="section">
+                     <h3 class="section-title">AUTHOR</h3>
+                     <div class="p">Written by John Doe. </div>
+                  </div>
+               </div>
+               <div class="related-links">
+                  <h3 class="related-links-title">Related information</h3>
+                  <p class="link">‣ <a href="http://www.manpagez.com/man/3/getcwd/" target="_blank"><b class="cmdname">getcwd</b>(3)</a></p>
+               </div>
+            </div>
+            <div id="glossentry_element" class="span8">
+               <h2 class="section3-title">The <tt class="tt">glossentry</tt> element
+               </h2>
+               <div class="body">
+                  <div class="p">Create a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/glossentry.html" class="xref" target="_blank"><tt class="tt">glossentry</tt></a> element when you need to add
+                     entry to a glossary.
+                  </div>
+                  <div class="p">The following example shows <i class="i">three</i> glossary entries having the
+                     following IDs: <tt class="tt">ajax</tt>, <tt class="tt">dhtml</tt>, <tt class="tt">javascript</tt>.
+                  </div><pre class="pre">&lt;<b class="b">glossgroup</b> id="sample_glossary"&gt;
+  &lt;title&gt;Sample glossary&lt;/title&gt;
+
+  &lt;<b class="b">glossentry</b> <i class="i">id="ajax"</i>&gt;
+    &lt;<b class="b">glossterm</b>&gt;AJAX&lt;/glossterm&gt;
+
+    &lt;<b class="b">glossdef</b>&gt;&lt;b&gt;A&lt;/b&gt;synchronous &lt;b&gt;Ja&lt;/b&gt;vaScript and &lt;b&gt;X&lt;/b&gt;ML. Web
+    development techniques used on the client-side to create interactive web
+    applications.&lt;/glossdef&gt;
+  &lt;/glossentry&gt;
+
+  &lt;<b class="b">glossentry</b> <i class="i">id="dhtml"</i>&gt;
+    &lt;<b class="b">glossterm</b>&gt;DHTML&lt;/glossterm&gt;
+
+    &lt;<b class="b">glossdef</b>&gt;&lt;b&gt;D&lt;/b&gt;ynamic &lt;b&gt;HTML&lt;/b&gt;. Web development techniques used on
+    the client-side to create interactive web sites.&lt;/glossdef&gt;
+  &lt;/glossentry&gt;
+
+  &lt;<b class="b">glossentry</b> <i class="i">id="javascript"</i>&gt;
+    &lt;<b class="b">glossterm</b>&gt;JavaScript&lt;/glossterm&gt;
+
+    &lt;<b class="b">glossdef</b>&gt;JavaScript is an object-oriented scripting language supported by
+    all major web browsers. It allows the development of interactive web sites
+    and web applications.&lt;/glossdef&gt;
+
+    &lt;<b class="b">related-links</b>&gt;
+      &lt;link format="html" href="https://developer.mozilla.org/en/JavaScript"
+            scope="external"&gt;
+        &lt;linktext&gt;Mozilla's Official Documentation on JavaScript&lt;/linktext&gt;
+      &lt;/link&gt;
+    &lt;/related-links&gt;
+  &lt;/glossentry&gt;
+&lt;/glossgroup&gt;</pre><div class="p">The <tt class="tt">glossentry</tt> element is the simplest specialized topic type.
+                     It contains a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/glossterm.html" class="xref" target="_blank"><tt class="tt">glossterm</tt></a> child element (the term being
+                     defined) followed by a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/glossdef.html" class="xref" target="_blank"><tt class="tt">glossdef</tt></a> (the definition of the term)
+                     child element, optionally followed by the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/related-links.html" class="xref" target="_blank"><tt class="tt">related-links</tt></a> element common to all topic
+                     types.
+                  </div>
+                  <div class="p">In the above example, the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/glossgroup.html" class="xref" target="_blank"><tt class="tt">glossgroup</tt></a> element is used as a container
+                     for the three <tt class="tt">glossentry</tt> elements.
+                  </div>
+                  <div class="note"><span class="label">Remember</span> <span class="note-body">
+                        <ul class="ul">
+                           <li class="li">
+                              <div class="p">It is not recommended to create XML files containing several
+                                 topics because if you do so, first this makes it harder reusing your
+                                 topics in different documents and second, this makes the topic map
+                                 slightly harder to specify.
+                              </div>
+                              <div class="p">However if you need to create
+                                 multi-topic files, you'll have to use the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/dita.html" class="xref" target="_blank"><tt class="tt">dita</tt></a> element as a wrapper for your
+                                 topics. 
+                              </div>
+                           </li>
+                           <li class="li">A topic may contain other topics. The DITA grammar allows to add a
+                              topic child element after the <tt class="tt">body</tt> or <tt class="tt">related-links</tt>
+                              element (whichever is the last child) of the parent topic.
+                              <div class="p">It is not
+                                 recommended to use this nested topics facility which, in our opinion,
+                                 is almost never useful. The hierarchy of topics (that is, chapters
+                                 containing sections containing subsections, etc) is better expressed
+                                 in a map using a hierarchy of <tt class="tt">topicref</tt>s<a href="#I_d115e596_" class="fn-link"><sup class="fn-callout">(1)</sup></a>.
+                              </div>
+                           </li>
+                        </ul></span></div>
+                  <div class="p">The above example is rendered as follows:</div>
+               </div>
+            </div>
+            <div id="sample_glossary" class="JHE span4 glossgroup">
+               <h2 class="section4-title">Sample glossary</h2>
+            </div>
+            <div id="ajax" class="JHE span4 glossentry">
+               <div class="glossterm">AJAX</div>
+               <div class="glossdef"><b class="b">A</b>synchronous <b class="b">Ja</b>vaScript and <b class="b">X</b>ML. Web
+                  development techniques used on the client-side to create interactive web
+                  applications.
+               </div>
+            </div>
+            <div id="dhtml" class="JHE span4 glossentry">
+               <div class="glossterm">DHTML</div>
+               <div class="glossdef"><b class="b">D</b>ynamic <b class="b">HTML</b>. Web development techniques used on
+                  the client-side to create interactive web sites.
+               </div>
+            </div>
+            <div id="javascript" class="JHE span4 glossentry">
+               <div class="glossterm">JavaScript</div>
+               <div class="glossdef">JavaScript is an object-oriented scripting language supported by
+                  all major web browsers. It allows the development of interactive web sites
+                  and web applications.
+               </div>
+               <div class="related-links">
+                  <h3 class="related-links-title">Related information</h3>
+                  <p class="link">‣ <a href="https://developer.mozilla.org/en/JavaScript" target="_blank">Mozilla's Official Documentation on JavaScript</a></p>
+               </div>
+            </div>
+         </div>
+         <hr class="footnote-separator" />
+         <table border="0" cellspacing="0" cellpadding="0" class="fn-layout">
+            <tr>
+               <td valign="baseline"> <sup class="fn-callout">(1)</sup></td>
+               <td valign="baseline" id="I_d115e596_" class="fn">More about topic
+                  maps later in this tutorial.
+               </td>
+            </tr>
+         </table>
+         <div class="page-navigation-bar">
+            <hr class="page-navigation-bottom-separator" />
+            <table border="0" cellspacing="0" width="100%" class="page-navigation-layout">
+               <tr valign="top">
+                  <td align="left"><a href="index.html" class="navigation-link" title="First page: DITA for the Impatient" accesskey="S"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/first.png" alt="First page" width="16" height="16" /></a></td>
+                  <td align="left"><a href="topic.html" class="navigation-link" title="Previous page: The topic element" accesskey="P"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/previous.png" alt="Previous page" width="16" height="16" /></a></td>
+                  <td width="25%" align="left"><span class="page-navigation-previous">The topic element</span></td>
+                  <td width="40%" align="center"><span class="page-navigation-current">Specialized topic types</span> <span class="page-navigation-page">(3 / 5)</span></td>
+                  <td width="25%" align="right"><span class="page-navigation-next">Topic maps</span></td>
+                  <td align="right"><a href="index-2.html" class="navigation-link" title="Next page: Topic maps" accesskey="N"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/next.png" alt="Next page" width="16" height="16" /></a></td>
+                  <td align="right"><a href="index-3.html" class="navigation-link" title="Last page: Conclusion" accesskey="E"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/last.png" alt="Last page" width="16" height="16" /></a></td>
+               </tr>
+            </table>
+         </div>
+      </div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script><script src="http://fancyapps.com/fancybox/source/jquery.fancybox.js" type="text/javascript"></script><script type="text/javascript">
+    $(document).ready(function(){ /* standard jquery stuff from w3school */
+    //  $("div.fig").hide();
+      $("button").click(function(){
+        $("div.fig").slideToggle();
+        $("div.info").slideToggle();
+        $("div.tutorialinfo").slideToggle();
+        $("div.stepxmp").slideToggle();
+        $("div.stepresult").slideToggle();
+        $("ol.substeps").slideToggle();
+        $("ul.choices").slideToggle();
+      });
+
+      /* from fancybox page ref to http://jsfiddle.net/47xjk/  */
+      $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox({
+            padding : 0,
+//            prevEffect   : 'elastic',
+            openEffect  : 'elastic',
+//            nextEffect    : 'elastic'
+
+    });  
+      // JHE: should be possible to loose the .attr('rel', 'gallery') part now because its handled in body.xsl
+    });
+    </script></body>
+</html>

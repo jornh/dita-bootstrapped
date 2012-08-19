@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>The topic element</title>
+      <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css" rel="stylesheet" />
+      <link href="http://fancyapps.com/fancybox/source/jquery.fancybox.css" rel="stylesheet" /><style type="text/css">
+      body {
+        position: relative;
+        padding-top: 60px; /* adjust for navbar */
+      }
+      h2 {
+        padding-top: 60px; /* adjust for navbar */
+      }
+    </style><meta name="generator" content="XMLmind DITA Converter 2.2.1" />
+   </head>
+   <body>
+      <div class="navbar navbar-fixed-top">
+         <div class="navbar-inner">
+            <div class="container">
+               <p><button class="btn btn-inverse pull-right">Toggle: Just facts/details</button></p>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="page-navigation-bar">
+            <table border="0" cellspacing="0" width="100%" class="page-navigation-layout">
+               <tr valign="top">
+                  <td align="left"><a href="index.html" class="navigation-link" title="First page: DITA for the Impatient" accesskey="S"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/first.png" alt="First page" width="16" height="16" /></a></td>
+                  <td align="left"><a href="index.html" class="navigation-link" title="Previous page: DITA for the Impatient" accesskey="P"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/previous.png" alt="Previous page" width="16" height="16" /></a></td>
+                  <td width="25%" align="left"><span class="page-navigation-previous">DITA for the Impatient</span></td>
+                  <td width="40%" align="center"><span class="page-navigation-current">The topic element</span> <span class="page-navigation-page">(2 / 5)</span></td>
+                  <td width="25%" align="right"><span class="page-navigation-next">Specialized topic types</span></td>
+                  <td align="right"><a href="specialized_topics.html" class="navigation-link" title="Next page: Specialized topic types" accesskey="N"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/next.png" alt="Next page" width="16" height="16" /></a></td>
+                  <td align="right"><a href="index-3.html" class="navigation-link" title="Last page: Conclusion" accesskey="E"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/last.png" alt="Last page" width="16" height="16" /></a></td>
+               </tr>
+            </table>
+            <hr class="page-navigation-top-separator" />
+         </div>
+         <div class="row">
+            <div id="topic_element" class="span12">
+               <h2 class="section2-title">The <tt class="tt">topic</tt> element
+               </h2>
+               <div class="abstract">In this chapter,
+                  <ul style="list-style-type: none;" class="compact-sl">
+                     <li class="sli">we'll first explain what is the structure of a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topic.html" class="xref" target="_blank"><tt class="tt">topic</tt></a> element;
+                     </li>
+                     <li class="sli">then we'll list the most useful “block elements” (paragraph, table,
+                        list, etc);
+                     </li>
+                     <li class="sli">then we'll list the most useful “inline elements” (bold, italic,
+                        etc);
+                     </li>
+                     <li class="sli">finally, we'll explain how to create internal and external links.
+                        Note that creating internal links in DITA, which is inherently modular,
+                        is slightly harder than in other, generally monolithic, document types.
+                        Therefore it is important to read this section carefully.
+                     </li>
+                  </ul>
+               </div>
+               <div class="unordered-members-linkpool">
+                  <p class="link">‣ <span class="parent-topic-link-item">Parent topic: </span><a href="index.html#about_topics_and_maps">About topics and maps</a></p>
+               </div>
+               <div class="unordered-parent-linkpool">
+                  <h4 class="linkpool-title">Child topics: </h4>
+                  <p class="link">‣ <a href="#topic_structure">The structure of the <tt class="tt">topic</tt> element</a></p>
+                  <p class="link">‣ <a href="#block_elements">The most commonly used “block elements”</a></p>
+                  <p class="link">‣ <a href="#inline_elements">The most commonly used “inline elements”</a></p>
+                  <p class="link">‣ <a href="#link_elements">The <tt class="tt">xref</tt> and <tt class="tt">link</tt> elements</a></p>
+               </div>
+            </div>
+            <div id="topic_structure" class="span8">
+               <h2 class="section3-title">The structure of the <tt class="tt">topic</tt> element
+               </h2>
+               <div class="body">
+                  <div class="note"><span class="label">Remember</span> <span class="note-body">A <tt class="tt">topic</tt> element must always be given an ID.
+                        Use the <tt class="tt">id</tt> attribute to specify it.</span></div>
+                  <div class="p">The structure of the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topic.html" class="xref" target="_blank"><tt class="tt">topic</tt></a> element is very simple:
+                  </div>
+                  <ol class="ol">
+                     <li class="li">
+                        <div class="p">A <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html" class="xref" target="_blank"><tt class="tt">title</tt></a> element.
+                        </div>
+                     </li>
+                     <li class="li">
+                        <div class="p">An optional <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/shortdesc.html" class="xref" target="_blank"><tt class="tt">shortdesc</tt></a> or <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/abstract.html" class="xref" target="_blank"><tt class="tt">abstract</tt></a> element.
+                        </div>
+                        <div class="p">The
+                           <tt class="tt">shortdesc</tt> element is longer and more descriptive than the
+                           <tt class="tt">title</tt> element. However, it is recommended to keep it short,
+                           approximately one paragraph long, because the contents of this element
+                           is often used during navigation (e.g. to generate a detailed table of
+                           contents).
+                        </div>
+                        <div class="p">The <tt class="tt">abstract</tt> element is intended to contain
+                           more information than the <tt class="tt">shortdesc</tt> element.
+                        </div>
+                     </li>
+                     <li class="li">
+                        <div class="p">A <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/body.html" class="xref" target="_blank"><tt class="tt">body</tt></a> element<a href="#I_d45e137_" class="fn-link"><sup class="fn-callout">(1)</sup></a>.
+                        </div>
+                     </li>
+                     <li class="li">
+                        <div class="p">An optional <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/related-links.html" class="xref" target="_blank"><tt class="tt">related-links</tt></a> element.
+                        </div>
+                        <div class="p">This is a
+                           kind of ``<b class="b">See Also</b>'' section containing a list of <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/link.html" class="xref" target="_blank"><tt class="tt">link</tt></a> elements. Topics being generally
+                           short, this section stands out clearly after the body of a topic. That's
+                           why it is often preferred to spreading links inside the body of a
+                           topic.
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="p">Example:</div><pre class="pre">&lt;<b class="b">topic</b> <i class="i">id="docbook_or_dita"</i>&gt;
+  &lt;<b class="b">title</b>&gt;DITA or DocBook?&lt;/title&gt;
+
+  &lt;<b class="b">shortdesc</b>&gt;Both DITA and DocBook are both mature, feature rich, document types,
+  so which one to choose?&lt;/shortdesc&gt;
+
+  &lt;<b class="b">body</b>&gt;
+    &lt;p&gt;DocBook 5 is a mature document type, well-documented (DocBook: The
+    Definitive Guide, DocBook XSL: The Complete Guide), coming with decent XSL
+    stylesheets allowing to convert it to a variety of formats, based on the
+    best schema technologies: RELAX NG and Schematron.&lt;/p&gt;
+
+    &lt;p&gt;DITA concepts (topics, maps, specialization, etc) have an immediate
+    appeal to the technical writer and indeed, makes this document type more
+    attractive than DocBook. However the DocBook vocabulary is comprehensive
+    and very well thought. So choose DITA if its standard vocabulary is
+    sufficiently expressive for your needs or if, anyway, you intend to
+    specialize DITA.&lt;/p&gt;
+  &lt;/body&gt;
+
+  &lt;<b class="b">related-links</b>&gt;
+    &lt;<b class="b">link</b> format="html" href="http://www.docbook.org/" scope="external"&gt;
+      &lt;linktext&gt;DocBook 5&lt;/linktext&gt;
+    &lt;/link&gt;
+
+    &lt;<b class="b">link</b> format="html"
+          href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=dita"
+          scope="external"&gt;
+      &lt;linktext&gt;DITA&lt;/linktext&gt;
+    &lt;/link&gt;
+  &lt;/related-links&gt;
+&lt;/topic&gt;</pre><div class="p">The above example is rendered as follows:</div>
+               </div>
+            </div>
+            <div id="docbook_or_dita" class="JHE span4 topic">
+               <h2 class="section4-title">DITA or DocBook?</h2>
+               <p class="shortdesc">Both DITA and DocBook are both mature, feature rich, document
+                  types, so which one to choose?
+               </p>
+               <div class="body">
+                  <div class="p">DocBook 5 is a mature document type, well-documented (DocBook: The
+                     Definitive Guide, DocBook XSL: The Complete Guide), coming with decent XSL
+                     stylesheets allowing to convert it to a variety of formats, based on the
+                     best schema technologies: RELAX NG and Schematron.
+                  </div>
+                  <div class="p">DITA concepts (topics, maps, specialization, etc) have an immediate
+                     appeal to the technical writer and indeed, makes this document type more
+                     attractive than DocBook. However the DocBook vocabulary is comprehensive
+                     and very well thought. So choose DITA if its standard vocabulary is
+                     sufficiently expressive for your needs or if, anyway, you intend to
+                     specialize DITA.
+                  </div>
+               </div>
+               <div class="related-links">
+                  <h3 class="related-links-title">Related information</h3>
+                  <p class="link">‣ <a href="http://www.docbook.org/" target="_blank">DocBook 5</a></p>
+                  <p class="link">‣ <a href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=dita" target="_blank">DITA</a></p>
+               </div>
+            </div>
+            <div id="block_elements" class="span6">
+               <h2 class="section3-title">The most commonly used “block elements”</h2>
+               <div class="body">
+                  <div class="p">The most commonly used block elements are borrowed from HTML and as
+                     such, should be immediately familiar to the reader.
+                  </div>
+                  <div id="block_elements__I_2pphd_" class="section">
+                     <h3 class="section-title">Paragraphs and lists</h3>
+                     <div class="p">A paragraph is represented
+                        by the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/p.html" class="xref" target="_blank"><tt class="tt">p</tt></a> element.
+                     </div>
+                     <div class="p">A preformatted paragraph
+                        is represented by the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/pre.html" class="xref" target="_blank"><tt class="tt">pre</tt></a> element.
+                     </div>
+                     <div class="p">An itemized list is
+                        represented by the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/ul.html" class="xref" target="_blank"><tt class="tt">ul</tt></a> element. As expected, it contains
+                        <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/li.html" class="xref" target="_blank"><tt class="tt">li</tt></a> list item elements.
+                     </div>
+                     <div class="p">An ordered
+                        list is represented by the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/ol.html" class="xref" target="_blank"><tt class="tt">ol</tt></a> element.
+                     </div>
+                     <div class="p">A variable list is
+                        represented by the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/dl.html" class="xref" target="_blank"><tt class="tt">dl</tt></a> element. Unlike HTML's <tt class="tt">dl</tt>,
+                        the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/dt.html" class="xref" target="_blank"><tt class="tt">dt</tt></a> (term being defined) and the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/dd.html" class="xref" target="_blank"><tt class="tt">dd</tt></a> (term definition) elements must be
+                        wrapped in a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/dlentry.html" class="xref" target="_blank"><tt class="tt">dlentry</tt></a> element.
+                     </div>
+                     <div class="p">Example:</div><pre class="pre">&lt;<b class="b">ul</b>&gt;
+  &lt;<b class="b">li</b>&gt;First item.
+    &lt;<b class="b">p</b>&gt;Continuation paragraph.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;Second item. This item contains an ordered list.
+    &lt;<b class="b">ol</b>&gt;
+      &lt;li&gt;First do this.&lt;/li&gt;
+      &lt;li&gt;Then do that.&lt;/li&gt;
+      &lt;li&gt;Finally do this.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;Third item. This item contains a variable list.
+    &lt;<b class="b">dl</b>&gt;
+      &lt;<b class="b">dlentry</b>&gt;
+        &lt;<b class="b">dt</b>&gt;Term #1&lt;/dt&gt;
+        &lt;<b class="b">dd</b>&gt;Definition of term #1.&lt;/dd&gt;
+      &lt;/dlentry&gt;
+
+      &lt;dlentry&gt;
+        &lt;dt&gt;Term #2&lt;/dt&gt;
+        &lt;dd&gt;Definition of term #2.&lt;/dd&gt;
+      &lt;/dlentry&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre><div class="p">The above example is rendered as follows:</div>
+                     <ul class="ul">
+                        <li class="li">First item.
+                           <div class="p">Continuation paragraph.</div>
+                        </li>
+                        <li class="li">Second item. This item contains an ordered list.
+                           <ol class="ol">
+                              <li class="li">First do this.</li>
+                              <li class="li">Then do that.</li>
+                              <li class="li">Finally do this.</li>
+                           </ol>
+                        </li>
+                        <li class="li">Third item. This item contains a variable list.
+                           <dl class="dl">
+                              <dt class="dt">Term #1</dt>
+                              <dd class="dd">Definition of term #1.</dd>
+                              <dt class="dt">Term #2</dt>
+                              <dd class="dd">Definition of term #2.</dd>
+                           </dl>
+                        </li>
+                     </ul>
+                  </div>
+                  <div id="block_elements__I_5patg_" class="section">
+                     <h3 class="section-title">Sections</h3>
+                     <div class="p">DITA has no <tt class="tt">h1</tt>, <tt class="tt">h2</tt>,
+                        <tt class="tt">h3</tt>, etc, heading elements. Instead it has the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/section.html" class="xref" target="_blank"><tt class="tt">section</tt></a> element which generally always
+                        has a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html" class="xref" target="_blank"><tt class="tt">title</tt></a> child element. Note that
+                        <tt class="tt">section</tt> elements cannot nest. Example:
+                     </div><pre class="pre">&lt;<b class="b">section</b>&gt;
+  &lt;<b class="b">title</b>&gt;The customary “hello word” program in Tcl/Tk&lt;/title&gt;
+
+  &lt;<b class="b">pre</b> <i class="i">frame="all"</i>&gt;button .hello -text "Hello, World!" -command { exit }
+       pack .hello&lt;/pre&gt;
+&lt;/section&gt;</pre><div class="p">The above example is rendered as
+                        follows:
+                     </div>
+                  </div>
+                  <div id="block_elements__I_5236f_" class="section">
+                     <h3 class="section-title">The customary “hello word” program in Tcl/Tk</h3><pre class="pre" style="border-width: 1px; border-style: solid; padding: 0.5ex;">button .hello -text "Hello, World!" -command { exit }
+pack .hello</pre></div>
+                  <div id="block_elements__I_4fbnb_" class="section">
+                     <h3 class="section-title">Figures and examples</h3>
+                     <div class="p">Of course, DITA has also
+                        figure, table and example elements.
+                     </div>
+                     <div class="p">The <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/example.html" class="xref" target="_blank"><tt class="tt">example</tt></a> element is just a specialized
+                        kind of <tt class="tt">section</tt>.
+                     </div>
+                     <div class="p">The <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/fig.html" class="xref" target="_blank"><tt class="tt">fig</tt></a> element generally has a
+                        <tt class="tt">title</tt> and generally contains an <tt class="tt">image</tt>
+                        element.
+                     </div>
+                     <div class="p">Like <tt class="tt">img</tt>, its HTML counterpart, the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html" class="xref" target="_blank"><tt class="tt">image</tt></a> “inline element” may be contained
+                        in any “block element”. The graphics file which is to be displayed is
+                        specified using the <tt class="tt">href</tt> attribute. The <tt class="tt">image</tt> element
+                        also has <tt class="tt">width</tt>, <tt class="tt">height,</tt> <tt class="tt">scale</tt> and
+                        <tt class="tt">align</tt> attributes.
+                     </div>
+                     <div class="p">Example:</div><pre class="pre">&lt;<b class="b">example</b>&gt;
+  &lt;<b class="b">title</b>&gt;Converting a color image to black and white&lt;/title&gt;
+
+  &lt;pre&gt;$ convert -dither Floyd-Steinberg -monochrome photo.png bwphoto.gif&lt;/pre&gt;
+
+  &lt;<b class="b">fig</b>&gt;
+    &lt;<b class="b">title</b>&gt;The photo converted to black and white&lt;/title&gt;
+    &lt;<b class="b">image</b> <i class="i">href="bwphoto.gif"</i> <i class="i">align="center"</i>/&gt;
+  &lt;/fig&gt;
+&lt;/example&gt;</pre><div class="p">The above example is rendered as
+                        follows:
+                     </div>
+                  </div>
+                  <div id="block_elements__I_b5by3_" class="example">
+                     <h3 class="example-title">Converting a color image to black and white</h3><pre class="pre">$ convert -dither Floyd-Steinberg -monochrome photo.png bwphoto.gif</pre><div id="block_elements__I_adity_" class="fig">
+                        <h4 class="fig-title">The photo converted to black and white</h4>
+                        <div class="fig-contents">
+                           <div class="image-container" style="text-align: center;"><a href="img/bwphoto.gif" rel="gallery"><img src="img/bwphoto.gif" class="image" alt="bwphoto.gif" /></a></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="block_elements__I_df32i_" class="section">
+                     <h3 class="section-title">Tables</h3>
+                     <div class="p">DITA has two kinds of table element:
+                        <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/simpletable.html" class="xref" target="_blank"><tt class="tt">simpletable</tt></a> which is specific to DITA,
+                        and <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html" class="xref" target="_blank"><tt class="tt">table</tt></a> which is in fact a <a href="http://www.oasis-open.org/specs/a502.htm" class="xref" target="_blank">CALS</a> table (also know as a DocBook
+                        table).
+                     </div>
+                     <div class="p"><tt class="tt">Simpletable</tt> example:
+                     </div><pre class="pre">&lt;<b class="b">simpletable</b> <i class="i">relcolwidth="1* 2* 3*"</i>&gt;
+  &lt;<b class="b">sthead</b>&gt;
+    &lt;<b class="b">stentry</b>&gt;A&lt;/stentry&gt;
+    &lt;stentry&gt;B&lt;/stentry&gt;
+    &lt;stentry&gt;C&lt;/stentry&gt;
+  &lt;/sthead&gt;
+
+  &lt;<b class="b">strow</b>&gt;
+    &lt;stentry&gt;A,1&lt;/stentry&gt;
+    &lt;stentry&gt;B,1&lt;/stentry&gt;
+    &lt;stentry&gt;C,1&lt;/stentry&gt;
+  &lt;/strow&gt;
+
+  &lt;strow&gt;
+    &lt;stentry&gt;A,2&lt;/stentry&gt;
+    &lt;stentry&gt;B,2&lt;/stentry&gt;
+    &lt;stentry&gt;C,2&lt;/stentry&gt;
+  &lt;/strow&gt;
+&lt;/simpletable&gt;</pre><div class="p">A <tt class="tt">simpletable</tt> element contains an
+                        optional <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/sthead.html" class="xref" target="_blank"><tt class="tt">sthead</tt></a> element, followed by one or more
+                        <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/strow.html" class="xref" target="_blank"><tt class="tt">strow</tt></a> elements. Both row elements,
+                        <tt class="tt">sthead</tt> and <tt class="tt">strow</tt>, contain <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/stentry.html" class="xref" target="_blank"><tt class="tt">stentry</tt></a> cell elements. The
+                        <tt class="tt">relcolwidth</tt> attribute may be used to specify the relative width
+                        of each column.
+                     </div>
+                     <div class="p">The above example is rendered as
+                        follows:
+                     </div>
+                     <div class="simpletable-container">
+                        <table border="1" class="simpletable">
+                           <col width="17%" />
+                           <col width="33%" />
+                           <col width="50%" />
+                           <thead>
+                              <tr class="sthead">
+                                 <th class="header-stentry">A</th>
+                                 <th class="header-stentry">B</th>
+                                 <th class="header-stentry">C</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="strow">
+                                 <td class="stentry">A,1</td>
+                                 <td class="stentry">B,1</td>
+                                 <td class="stentry">C,1</td>
+                              </tr>
+                              <tr class="strow">
+                                 <td class="stentry">A,2</td>
+                                 <td class="stentry">B,2</td>
+                                 <td class="stentry">C,2</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="p">Same as above example but using a CALS <tt class="tt">table</tt>
+                        this time:
+                     </div><pre class="pre">&lt;<b class="b">table</b>&gt;
+  &lt;<b class="b">title</b>&gt;Sample CALS table&lt;/title&gt;
+
+  &lt;<b class="b">tgroup</b> cols="3"&gt;
+    &lt;<b class="b">colspec</b> <i class="i">colwidth="1*"</i>/&gt;
+    &lt;colspec <i class="i">colwidth="2*"</i>/&gt;
+    &lt;colspec <i class="i">colwidth="3*"</i>/&gt;
+
+    &lt;<b class="b">thead</b>&gt;
+      &lt;<b class="b">row</b>&gt;
+        &lt;<b class="b">entry</b> <i class="i">align="center"</i>&gt;A&lt;/entry&gt;
+        &lt;entry align="center"&gt;B&lt;/entry&gt;
+        &lt;entry align="center"&gt;C&lt;/entry&gt;
+      &lt;/row&gt;
+    &lt;/thead&gt;
+
+    &lt;<b class="b">tbody</b>&gt;
+      &lt;row&gt;
+        &lt;entry&gt;A,1&lt;/entry&gt;
+        &lt;entry&gt;B,1&lt;/entry&gt;
+        &lt;entry&gt;C,1&lt;/entry&gt;
+      &lt;/row&gt;
+
+      &lt;row&gt;
+        &lt;entry&gt;A,2&lt;/entry&gt;
+        &lt;entry&gt;B,2&lt;/entry&gt;
+        &lt;entry&gt;C,2&lt;/entry&gt;
+      &lt;/row&gt;
+    &lt;/tbody&gt;
+  &lt;/tgroup&gt;
+&lt;/table&gt;</pre><div class="p">CALS tables are quite complex and explaining how they
+                        can be used is out of the scope of this tutorial. Our recommendation is to
+                        use CALS tables rather than <tt class="tt">simpletable</tt>s only when you want a
+                        cell to span more than one row and/or more than one column.
+                     </div>
+                     <div class="p">The
+                        above example is rendered as follows:
+                     </div>
+                     <div id="block_elements__I_8p9h4_" class="table">
+                        <h4 class="table-title">Sample CALS table</h4>
+                        <table class="tgroup" border="1">
+                           <col class="colspec" width="17%" />
+                           <col class="colspec" width="33%" />
+                           <col class="colspec" width="50%" />
+                           <thead class="thead">
+                              <tr class="row">
+                                 <th class="header-entry" align="center">A</th>
+                                 <th class="header-entry" align="center">B</th>
+                                 <th class="header-entry" align="center">C</th>
+                              </tr>
+                           </thead>
+                           <tbody class="tbody">
+                              <tr class="row">
+                                 <td class="entry">A,1</td>
+                                 <td class="entry">B,1</td>
+                                 <td class="entry">C,1</td>
+                              </tr>
+                              <tr class="row">
+                                 <td class="entry">A,2</td>
+                                 <td class="entry">B,2</td>
+                                 <td class="entry">C,2</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="unordered-members-linkpool">
+                  <p class="link">‣ <span class="parent-topic-link-item">Parent topic: </span><a href="#topic_element">The <tt class="tt">topic</tt> element</a></p>
+               </div>
+            </div>
+            <div id="inline_elements" class="span6">
+               <h2 class="section3-title">The most commonly used “inline elements”</h2>
+               <div class="body">
+                  <div class="p">The most generic inline elements are also borrowed from HTML: <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/i.html" class="xref" target="_blank"><tt class="tt">i</tt></a> (italic), <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/b.html" class="xref" target="_blank"><tt class="tt">b</tt></a> (bold), <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/tt.html" class="xref" target="_blank"><tt class="tt">tt</tt></a> (teletype or monospaced text), <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/sub.html" class="xref" target="_blank"><tt class="tt">sub</tt></a> (subscript), <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/sup.html" class="xref" target="_blank"><tt class="tt">sup</tt></a> (superscript).
+                  </div>
+                  <div class="p">However like with any other document type, you should always try to use
+                     the most specific element for your needs. Examples:
+                  </div>
+                  <ul class="ul">
+                     <li class="li">If you need to specify a filename, do not use <tt class="tt">tt</tt>, instead
+                        use <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/filepath.html" class="xref" target="_blank"><tt class="tt">filepath</tt></a>.
+                     </li>
+                     <li class="li">If you need to specify a variable, do not use <tt class="tt">i</tt>, instead
+                        use <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/varname.html" class="xref" target="_blank"><tt class="tt">varname</tt></a>.
+                     </li>
+                     <li class="li">If you need to specify the name of a command, do not use <tt class="tt">b</tt>,
+                        instead use <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/cmdname.html" class="xref" target="_blank"><tt class="tt">cmdname</tt></a>.
+                     </li>
+                  </ul>
+                  <div class="p">DITA has dozens of such useful inline elements. In order to use them,
+                     we recommend authoring your documents with a DITA aware XML editor and
+                     browsing through the element names suggested by the editor. Generally
+                     these names are very descriptive, so there is no real need to read the
+                     documentation.
+                  </div>
+                  <div class="note"><span class="label">Remember</span> <span class="note-body">Using the most specific elements rather than the
+                        generic <tt class="tt">i</tt>, <tt class="tt">b</tt>, <tt class="tt">tt</tt> elements, means getting nicer
+                        deliverables. 
+                        <div class="p">Example: Let's suppose you want to refer to the
+                           "<tt class="tt">Open</tt>" item of the "<tt class="tt">File</tt>" menu. Do not type
+                           <tt class="userinput">&lt;tt&gt;File-&gt;Open&lt;/tt&gt;</tt> which would be
+                           rendered as: <tt class="tt">File-&gt;Open</tt>. Instead type
+                           <tt class="userinput">&lt;menucascade&gt;&lt;uicontrol&gt;File&lt;/uicontrol&gt;&lt;uicontrol&gt;Open&lt;/uicontrol&gt;&lt;/menucascade&gt;</tt>,
+                           which will be rendered as: <span class="menucascade"><b class="uicontrol">File</b> → <b class="uicontrol">Open</b></span>. Much nicer, isn't it?
+                        </div>
+                        <div class="p">See <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/uicontrol.html" class="xref" target="_blank"><tt class="tt">uicontrol</tt></a> and <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/menucascade.html" class="xref" target="_blank"><tt class="tt">menucascade</tt></a>.
+                        </div></span></div>
+               </div>
+               <div class="unordered-members-linkpool">
+                  <p class="link">‣ <span class="parent-topic-link-item">Parent topic: </span><a href="#topic_element">The <tt class="tt">topic</tt> element</a></p>
+               </div>
+            </div>
+            <div id="link_elements" class="span6">
+               <h2 class="section3-title">The <tt class="tt">xref</tt> and <tt class="tt">link</tt> elements
+               </h2>
+               <div class="body">
+                  <div class="p">DITA has two elements which allow to specify internal or external
+                     links: <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html" class="xref"><tt class="tt">xref</tt></a>
+                     and <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/link.html" class="xref"><tt class="tt">link</tt></a>.
+                  </div>
+                  <div class="p">The <tt class="tt">xref</tt> “inline element” may be contained in any “block
+                     element”.
+                  </div>
+                  <div class="p">The <tt class="tt">link</tt> element may be contained only in a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/related-links.html" class="xref"><tt class="tt">related-links</tt></a>
+                     element.
+                  </div>
+                  <div class="p">Both elements may contain text, though in the case of the <tt class="tt">link</tt>
+                     element, this text must be wrapped in a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/linktext.html" class="xref"><tt class="tt">linktext</tt></a>
+                     child element.
+                  </div>
+                  <div class="p">For both elements, the target of the link is specified by the value of
+                     the <tt class="tt">href</tt> attribute, which is an absolute or relative URL,
+                     possibly ending with a fragment.
+                  </div>
+                  <div class="p">Examples:</div><pre class="pre">&lt;xref href="topic_structure.dita"/&gt;
+
+&lt;xref href="http://www.xmlmind.com/xmleditor/"
+      format="html"
+      scope="external"&gt;XMLmind XML Editor&lt;/xref&gt;
+
+&lt;link href="samples/sample_topic.dita#docbook_or_dita"/&gt;
+
+&lt;link href="http://www.xmlmind.com/ditac/"
+      format="html"
+      scope="external"&gt;
+  &lt;linktext&gt;XMLmind DITA Converter&lt;/linktext&gt;
+&lt;/link&gt;</pre><div id="link_elements__I_1kg9p_" class="section">
+                     <h3 class="section-title">External links</h3>
+                     <div class="p">The target of an external link is
+                        any location outside the overall DITA document. This location may be an
+                        absolute or relative URL. This location is not intended to be transformed
+                        by the DITA processing software (e.g. <a href="http://sourceforge.net/projects/dita-ot/" class="xref" target="_blank">DITA Open
+                           Toolkit</a> or <a href="http://www.xmlmind.com/ditac/" class="xref" target="_blank">XMLmind DITA Converter</a>).
+                     </div>
+                     <div class="note"><span class="label">Remember</span> <span class="note-body">
+                           <ul class="ul">
+                              <li class="li">Always specify a text for an external link, as the DITA processing
+                                 software has no way to automatically generate some text for such
+                                 links.
+                              </li>
+                              <li class="li">Always specify the <tt class="tt">format</tt> attribute of the link element.
+                                 Example: given an URL such as
+                                 "<tt class="tt">http://www.xmlmind.com/ditac/</tt>", the DITA processing software
+                                 has no way to guess that this corresponds to an HTML file.
+                              </li>
+                              <li class="li">Always specify attribute <tt class="tt">scope="external"</tt> for such links.
+                                 By doing so, you instruct the DITA processing software to use the
+                                 target location <i class="i">as is</i> in the deliverable.
+                              </li>
+                           </ul></span></div>
+                  </div>
+                  <div id="link_elements__I_cprdh_" class="section">
+                     <h3 class="section-title">Internal links</h3>
+                     <div class="p">The target of an internal link
+                        (<tt class="tt">xref</tt> or <tt class="tt">link</tt> element) is a DITA element belonging to
+                        the same DITA document. This target element may be found in the same XML
+                        file as the link element or, on the contrary, in a different XML file. The
+                        later case is still considered to be an internal link because both the
+                        link and its target belong to the same overall DITA document.
+                     </div>
+                     <div class="p">Of
+                        course, in order to use a DITA element as the target of a link, this
+                        element must have an <tt class="tt">id</tt> attribute.
+                     </div>
+                     <div class="p">The value of the
+                        <tt class="tt">href</tt> attribute of a link element is:
+                        "<tt class="tt"><i class="i">URL_of_the_target_DITA_file</i><b class="b">#</b></tt><i class="i"><tt class="tt">qualified_ID_of_the_target_element</tt></i>",
+                        where:
+                     </div>
+                     <ul class="compact-ul">
+                        <li class="li"><tt class="tt"><i class="i">URL_of_the_target_DITA_file</i></tt> may be omitted when
+                           both the link and its target are found in the same XML file.
+                        </li>
+                        <li class="li"><tt class="tt"><tt class="tt"><b class="b">#</b></tt><i class="i"><tt class="tt">qualified_ID_of_the_target_element</tt></i></tt>
+                           may be omitted if you want to address the first topic contained in an
+                           XML file.
+                        </li>
+                     </ul>
+                     <div class="p">What is the <i class="term">qualified ID</i> of the target
+                        element?
+                     </div>
+                     <ul class="compact-ul">
+                        <li class="li">It's simply the value of the <tt class="tt">id</tt> attribute for a topic
+                           element (of any kind: <tt class="tt">topic</tt>, <tt class="tt">concept</tt>,
+                           <tt class="tt">reference</tt>, etc).
+                        </li>
+                        <li class="li">It's the value of the <tt class="tt">id</tt> attribute of the target element
+                           prefixed by "<tt class="tt"><i class="i">ID_of_the_topic_ancestor</i><b class="b">/</b></tt>" for any
+                           descendant element of a topic.
+                        </li>
+                     </ul>
+                     <div class="p">Example: Let's suppose you want to add an <tt class="tt">xref</tt> element
+                        to <tt class="filepath">topic1.dita</tt>:
+                     </div><pre class="pre">&lt;topic <i class="i">id="t1"</i>&gt;
+  &lt;title&gt;Title of topic 1&lt;/title&gt;
+  &lt;body&gt;
+    &lt;p <i class="i">id="p1"</i>&gt;Paragraph inside topic 1.&lt;/p&gt;
+    &lt;p&gt;More information in <b class="b">&lt;xref href="???"/&gt;</b>.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</pre><div class="p">Let's suppose that you want to address elements
+                        contained in <tt class="filepath">topic2.dita</tt>, this file being found in
+                        the same directory as <tt class="filepath">topic1.dita</tt>.
+                     </div><pre class="pre">&lt;topic <i class="i">id="t2"</i>&gt;
+  &lt;title&gt;Title of topic 2&lt;/title&gt;
+  &lt;body&gt;
+    &lt;p <i class="i">id="p2"</i>&gt;Paragraph inside topic 2.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</pre><ul class="ul">
+                        <li class="li">If you want to address topic "<tt class="tt">t1</tt>", specify
+                           <tt class="tt">href="#t1"</tt>.
+                        </li>
+                        <li class="li">If you want to address paragraph "<tt class="tt">p1</tt>", specify
+                           <tt class="tt">href="#t1/p1"</tt>.
+                        </li>
+                        <li class="li">If you want to address topic "<tt class="tt">t2</tt>", specify
+                           <tt class="tt">href="topic2.dita#t2"</tt> or more simply
+                           <tt class="tt">href="topic2.dita"</tt>.
+                        </li>
+                        <li class="li">If you want to address paragraph "<tt class="tt">p2</tt>", specify
+                           <tt class="tt">href="topic2.dita#t2/p2"</tt>.
+                        </li>
+                     </ul>
+                     <div class="note"><span class="label">Remember</span> <span class="note-body">
+                           <ul class="ul">
+                              <li class="li">
+                                 <div class="p">There is generally no need to specify the text of internal
+                                    links, as the DITA processing software can automatically generate this
+                                    text.
+                                 </div>
+                                 <div class="p">Example: converting the following paragraph to
+                                    XHTML
+                                 </div><pre class="pre">&lt;p&gt;More information in &lt;xref href="topic2.dita"/&gt;.&lt;/p&gt;</pre><div class="p">may
+                                    result in something like:
+                                 </div><pre class="pre">&lt;p&gt;More information in
+   &lt;a href="page-23.html#t2"&gt;Title of topic 2&lt;/a&gt;.&lt;/p&gt;</pre><div class="p">This
+                                    probably works fine for any element having a title: <tt class="tt">topic</tt>,
+                                    <tt class="tt">section</tt>, <tt class="tt">table</tt>, <tt class="tt">fig</tt>, etc. However this
+                                    cannot work for the other elements.
+                                 </div>
+                                 <div class="p">For example, do not expect
+                                    the DITA processing software to generate some text for:
+                                 </div><pre class="pre">&lt;xref href="topic2.dita#t2/p2"/&gt;</pre><div class="p">Instead
+                                    explicitly specify some text:
+                                 </div><pre class="pre">&lt;xref href="topic2.dita#t2/p2"&gt;this paragraph&lt;/xref&gt;</pre></li>
+                              <li class="li">
+                                 <div class="p">Link targets are tedious and error prone to specify by hand.
+                                    Using a DITA-aware XML editor is therefore especially handy when it
+                                    comes to inserting link elements.
+                                 </div>
+                                 <div id="link_elements__I_2ovif_" class="fig">
+                                    <h4 class="fig-title">XMLmind XML Editor "<b class="uicontrol">Attributes Tool</b>"
+                                       is DITA-aware: see its auto-completion feature in action
+                                    </h4>
+                                    <div class="fig-contents">
+                                       <div class="image-container"><a href="img/xxe_attributes_tool.png" rel="gallery"><img src="img/xxe_attributes_tool.png" class="image" alt="xxe_attributes_tool.png" /></a></div>
+                                    </div>
+                                 </div>
+                                 <div class="p">More information: <a href="http://www.xmlmind.com/xmleditor/_distrib/doc/help/editAttributePane.html" class="xref">XMLmind
+                                       XML Editor - Online Help</a></div>
+                              </li>
+                           </ul></span></div>
+                  </div>
+               </div>
+               <div class="unordered-members-linkpool">
+                  <p class="link">‣ <span class="parent-topic-link-item">Parent topic: </span><a href="#topic_element">The <tt class="tt">topic</tt> element</a></p>
+               </div>
+            </div>
+         </div>
+         <hr class="footnote-separator" />
+         <table border="0" cellspacing="0" cellpadding="0" class="fn-layout">
+            <tr>
+               <td valign="baseline"> <sup class="fn-callout">(1)</sup></td>
+               <td valign="baseline" id="I_d45e137_" class="fn">The <tt class="tt">body</tt>
+                  element is optional too. However creating a <tt class="tt">topic</tt> element
+                  having no <tt class="tt">body</tt> child element is mainly a trick which is more
+                  simply implemented by adding a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topichead.html" class="xref" target="_blank"><tt class="tt">topichead</tt></a> to a map.
+               </td>
+            </tr>
+         </table>
+         <div class="page-navigation-bar">
+            <hr class="page-navigation-bottom-separator" />
+            <table border="0" cellspacing="0" width="100%" class="page-navigation-layout">
+               <tr valign="top">
+                  <td align="left"><a href="index.html" class="navigation-link" title="First page: DITA for the Impatient" accesskey="S"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/first.png" alt="First page" width="16" height="16" /></a></td>
+                  <td align="left"><a href="index.html" class="navigation-link" title="Previous page: DITA for the Impatient" accesskey="P"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/previous.png" alt="Previous page" width="16" height="16" /></a></td>
+                  <td width="25%" align="left"><span class="page-navigation-previous">DITA for the Impatient</span></td>
+                  <td width="40%" align="center"><span class="page-navigation-current">The topic element</span> <span class="page-navigation-page">(2 / 5)</span></td>
+                  <td width="25%" align="right"><span class="page-navigation-next">Specialized topic types</span></td>
+                  <td align="right"><a href="specialized_topics.html" class="navigation-link" title="Next page: Specialized topic types" accesskey="N"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/next.png" alt="Next page" width="16" height="16" /></a></td>
+                  <td align="right"><a href="index-3.html" class="navigation-link" title="Last page: Conclusion" accesskey="E"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/last.png" alt="Last page" width="16" height="16" /></a></td>
+               </tr>
+            </table>
+         </div>
+      </div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script><script src="http://fancyapps.com/fancybox/source/jquery.fancybox.js" type="text/javascript"></script><script type="text/javascript">
+    $(document).ready(function(){ /* standard jquery stuff from w3school */
+    //  $("div.fig").hide();
+      $("button").click(function(){
+        $("div.fig").slideToggle();
+        $("div.info").slideToggle();
+        $("div.tutorialinfo").slideToggle();
+        $("div.stepxmp").slideToggle();
+        $("div.stepresult").slideToggle();
+        $("ol.substeps").slideToggle();
+        $("ul.choices").slideToggle();
+      });
+
+      /* from fancybox page ref to http://jsfiddle.net/47xjk/  */
+      $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox({
+            padding : 0,
+//            prevEffect   : 'elastic',
+            openEffect  : 'elastic',
+//            nextEffect    : 'elastic'
+
+    });  
+      // JHE: should be possible to loose the .attr('rel', 'gallery') part now because its handled in body.xsl
+    });
+    </script></body>
+</html>

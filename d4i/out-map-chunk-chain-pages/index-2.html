@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Topic maps</title>
+      <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css" rel="stylesheet" />
+      <link href="http://fancyapps.com/fancybox/source/jquery.fancybox.css" rel="stylesheet" /><style type="text/css">
+      body {
+        position: relative;
+        padding-top: 60px; /* adjust for navbar */
+      }
+      h2 {
+        padding-top: 60px; /* adjust for navbar */
+      }
+    </style><meta name="generator" content="XMLmind DITA Converter 2.2.1" />
+   </head>
+   <body>
+      <div class="navbar navbar-fixed-top">
+         <div class="navbar-inner">
+            <div class="container">
+               <p><button class="btn btn-inverse pull-right">Toggle: Just facts/details</button></p>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="page-navigation-bar">
+            <table border="0" cellspacing="0" width="100%" class="page-navigation-layout">
+               <tr valign="top">
+                  <td align="left"><a href="index.html" class="navigation-link" title="First page: DITA for the Impatient" accesskey="S"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/first.png" alt="First page" width="16" height="16" /></a></td>
+                  <td align="left"><a href="specialized_topics.html" class="navigation-link" title="Previous page: Specialized topic types" accesskey="P"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/previous.png" alt="Previous page" width="16" height="16" /></a></td>
+                  <td width="25%" align="left"><span class="page-navigation-previous">Specialized topic types</span></td>
+                  <td width="40%" align="center"><span class="page-navigation-current">Topic maps</span> <span class="page-navigation-page">(4 / 5)</span></td>
+                  <td width="25%" align="right"><span class="page-navigation-next">Conclusion</span></td>
+                  <td align="right"><a href="index-3.html" class="navigation-link" title="Next page: Conclusion" accesskey="N"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/next.png" alt="Next page" width="16" height="16" /></a></td>
+                  <td align="right"><a href="index-3.html" class="navigation-link" title="Last page: Conclusion" accesskey="E"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/last.png" alt="Last page" width="16" height="16" /></a></td>
+               </tr>
+            </table>
+            <hr class="page-navigation-top-separator" />
+         </div>
+         <div class="row">
+            <div id="I_9uu5n_" class="JHE span4 topic">
+               <h2 class="section2-title">Topic maps</h2>
+               <div class="unordered-members-linkpool">
+                  <p class="link">‣ <span class="parent-topic-link-item">Parent topic: </span><a href="index.html#about_topics_and_maps">About topics and maps</a></p>
+               </div>
+               <div class="unordered-parent-linkpool">
+                  <h4 class="linkpool-title">Child topics: </h4>
+                  <p class="link">‣ <a href="#map_element">The <tt class="tt">map</tt> element</a></p>
+                  <p class="link">‣ <a href="#bookmap_element">The <tt class="tt">bookmap</tt> element</a></p>
+               </div>
+            </div>
+            <div id="map_element" class="JHE span4 topic">
+               <h2 class="section3-title">The <tt class="tt">map</tt> element
+               </h2>
+               <div class="body">
+                  <div class="p">A topic <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/map.html" class="xref" target="_blank"><tt class="tt">map</tt></a> mainly contains:
+                  </div>
+                  <ul class="ul">
+                     <li class="li">A <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html" class="xref" target="_blank"><tt class="tt">title</tt></a> child element.
+                     </li>
+                     <li class="li">A <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicmeta.html" class="xref" target="_blank"><tt class="tt">topicmeta</tt></a> element where you can specify
+                        the author of the document, the date of publication, etc.
+                     </li>
+                     <li class="li">A hierarchy of <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html" class="xref" target="_blank"><tt class="tt">topicref</tt></a> elements.
+                     </li>
+                  </ul>
+                  <div class="p">The <tt class="tt">href</tt> attribute of a <tt class="tt">topicref</tt> element specifies
+                     the URL of a topic which is part of the DITA document. Example:
+                  </div><pre class="pre">&lt;topicref href="samples/sample_glossary.dita"/&gt;</pre><div class="p">If the target XML file contains several topics (not recommended),
+                     you'll have to use a fragment to specify the ID of the referenced
+                     topic.
+                  </div><pre class="pre">&lt;topicref href="samples/sample_glossary.dita<b class="b">#javascript</b>"/&gt;</pre><div class="p">A map contains a <i class="i">hierarchy</i> of <tt class="tt">topicref</tt> elements. What
+                     does this mean?
+                  </div><pre class="pre">&lt;topicref href="topic.dita"&gt;
+  &lt;topicref href="topic_structure.dita"&gt;
+    &lt;topicref href="samples/sample_topic.dita"/&gt;
+  &lt;/topicref&gt;
+  &lt;topicref href="block_elements.dita"/&gt;
+  &lt;topicref href="inline_elements.dita"/&gt;
+  &lt;topicref href="link_elements.dita"/&gt;
+&lt;/topicref&gt;</pre><div class="p">In the case of the above example, this means two things:</div>
+                  <ol class="ol">
+                     <li class="li">The overall DITA document contains this sequence of topics:
+                        <tt class="filepath">topic.dita</tt>,
+                        <tt class="filepath">topic_structure.dita</tt>,
+                        <tt class="filepath">samples/sample_topic.dita</tt>,
+                        <tt class="filepath">block_elements.dita</tt>,
+                        <tt class="filepath">inline_elements.dita</tt>,
+                        <tt class="filepath">link_elements.dita</tt>.
+                     </li>
+                     <li class="li">Topics <tt class="filepath">topic_structure.dita</tt>,
+                        <tt class="filepath">block_elements.dita</tt>,
+                        <tt class="filepath">inline_elements.dita</tt>,
+                        <tt class="filepath">link_elements.dita</tt> are <i class="i">subsections</i> of topic
+                        <tt class="filepath">topic.dita</tt>. Topic
+                        <tt class="filepath">samples/sample_topic.dita</tt> is a subsection of topic
+                        <tt class="filepath">topic_structure.dita</tt>.
+                        <div class="p">If you instruct the DITA
+                           processing software to generate a Table of Contents for your document
+                           and/or to number the topics, the hierarchy of topics appears very
+                           clearly.
+                        </div>
+                     </li>
+                  </ol>
+                  <div class="p">What follows is the topic map actually used for this tutorial (contents
+                     of file <a href="src/tutorial.ditamap" class="xref" target="_blank"><tt class="filepath">tutorial.ditamap</tt></a>):
+                  </div><pre class="pre">&lt;<b class="b">map</b>&gt;
+  &lt;<b class="b">title</b>&gt;DITA for the Impatient&lt;/title&gt;
+
+  &lt;<b class="b">topicmeta</b>&gt;
+    &lt;<b class="b">author</b>&gt;Hussein Shafie&lt;/author&gt;
+    &lt;<b class="b">publisher</b>&gt;Pixware&lt;/publisher&gt;
+    &lt;<b class="b">critdates</b>&gt;
+      &lt;<b class="b">created</b> date="October 7, 2009"/&gt;
+    &lt;/critdates&gt;
+  &lt;/topicmeta&gt;
+
+  &lt;<b class="b">topicref</b> href="introduction.dita"/&gt;
+  &lt;topicref href="topics_and_maps.dita"/&gt;
+  &lt;topicref href="topic.dita"&gt;
+    &lt;topicref href="topic_structure.dita"&gt;
+      &lt;topicref href="samples/sample_topic.dita" <i class="i">toc="no"</i>/&gt;
+    &lt;/topicref&gt;
+    &lt;topicref href="block_elements.dita"/&gt;
+    &lt;topicref href="inline_elements.dita"/&gt;
+    &lt;topicref href="link_elements.dita"/&gt;
+  &lt;/topicref&gt;
+  .
+  .
+  .
+  &lt;<b class="b">topichead</b> <i class="i">navtitle="Topic maps"</i>&gt;
+    &lt;topicref href="map.dita"/&gt;
+    &lt;topicref href="bookmap.dita"/&gt;
+  &lt;/topichead&gt;
+  &lt;topicref href="conclusion.dita"/&gt;
+&lt;/map&gt;</pre><div id="map_element__I_ban3b_" class="section">
+                     <h3 class="section-title">The <tt class="tt">toc</tt> attribute
+                     </h3>
+                     <div class="p">Specifying attribute
+                        <tt class="tt">toc="no"</tt> for a <tt class="tt">topicref</tt> element allows to prevent it
+                        from appearing in the generated Table of Contents.
+                     </div><pre class="pre">    &lt;topicref href="topic_structure.dita"&gt;
+      &lt;topicref href="samples/sample_topic.dita" <i class="i">toc="no"</i>/&gt;
+    &lt;/topicref&gt;</pre></div>
+                  <div id="map_element__I_a9jj5_" class="section">
+                     <h3 class="section-title">The <tt class="tt">topichead</tt> element
+                     </h3>
+                     <div class="p">The <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topichead.html" class="xref" target="_blank"><tt class="tt">topichead</tt></a> element provides an author with
+                        a simple way to group several topics in the same HTML page and to give
+                        this HTML page a title<a href="#I_d164e209_" class="fn-link"><sup class="fn-callout">(1)</sup></a>.
+                     </div><pre class="pre">  &lt;<b class="b">topichead</b> <i class="i">navtitle="Topic maps"</i>&gt;
+    &lt;topicref href="map.dita"/&gt;
+    &lt;topicref href="bookmap.dita"/&gt;
+  &lt;/topichead&gt;</pre></div>
+               </div>
+               <div class="unordered-members-linkpool">
+                  <p class="link">‣ <span class="parent-topic-link-item">Parent topic: </span><a href="#I_9uu5n_">Topic maps</a></p>
+               </div>
+            </div>
+            <div id="bookmap_element" class="JHE span4 topic">
+               <h2 class="section3-title">The <tt class="tt">bookmap</tt> element
+               </h2>
+               <div class="body">
+                  <div class="p">A <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/bookmap.html" class="xref" target="_blank"><tt class="tt">bookmap</tt></a> element is just a more elaborate
+                     form of <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/map.html" class="xref" target="_blank"><tt class="tt">map</tt></a>. We recommend using a
+                     <tt class="tt">bookmap</tt> for anything more complex than an article.
+                  </div>
+                  <div class="note"><span class="label">Tip</span> <span class="note-body">
+                        <div class="p">You don't need to create a <tt class="tt">map</tt> for the screen
+                           media and a <tt class="tt">bookmap</tt> for the print media. If you follow the “one
+                           topic per XML file” rule, <i class="i">a single topic map</i> (<tt class="tt">map</tt> or
+                           <tt class="tt">bookmap</tt> depending on the complexity of the contents) is all what
+                           you need.
+                        </div></span></div>
+                  <ul class="ul">
+                     <li class="li">A <tt class="tt">bookmap</tt> may have a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/booktitle.html" class="xref" target="_blank"><tt class="tt">booktitle</tt></a> rather than a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html" class="xref" target="_blank"><tt class="tt">title</tt></a>.
+                     </li>
+                     <li class="li">Its metadata wrapper element, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/bookmeta.html" class="xref" target="_blank"><tt class="tt">bookmeta</tt></a>, may contain richer
+                        information than the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicmeta.html" class="xref" target="_blank"><tt class="tt">topicmeta</tt></a> element.
+                     </li>
+                     <li class="li">A bookmap may contain specializations of the <span class="xref"><tt class="tt">topicref</tt></span> element having stronger
+                        semantics: <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/part.html" class="xref" target="_blank"><tt class="tt">part</tt></a>, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/chapter.html" class="xref" target="_blank"><tt class="tt">chapter</tt></a>, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/appendix.html" class="xref" target="_blank"><tt class="tt">appendix</tt></a>.
+                     </li>
+                     <li class="li">The hierarchy of references to topic elements which makes up the
+                        body of the document may be preceded by a <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/frontmatter.html" class="xref" target="_blank"><tt class="tt">frontmatter</tt></a> element and followed by a
+                        <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/backmatter.html" class="xref" target="_blank"><tt class="tt">backmatter</tt></a> element.
+                        <div class="p">These wrapper
+                           elements can contain references to actual, hand-written, topics: <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/bookabstract.html" class="xref" target="_blank">bookabstract</a>, <tt class="tt"><a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/preface.html" class="xref" target="_blank">preface</a></tt>, <tt class="tt"><a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/dedication.html" class="xref" target="_blank">dedication</a></tt>, <tt class="tt"><a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/colophon.html" class="xref" target="_blank">colophon</a></tt>, etc.
+                        </div>
+                        <div class="p">However the most
+                           common use of <tt class="tt">frontmatter</tt> and <tt class="tt">backmatter</tt> is to contain
+                           the following, empty, placeholder elements: <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/toc.html" class="xref" target="_blank"><tt class="tt">toc</tt></a>, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/figurelist.html" class="xref" target="_blank"><tt class="tt">figurelist</tt></a>, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/tablelist.html" class="xref" target="_blank"><tt class="tt">tablelist</tt></a>, <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/indexlist.html" class="xref" target="_blank"><tt class="tt">indexlist</tt></a>. These placeholders instructs
+                           the DITA processing software to automatically generate: a Table of
+                           Contents, a List of Figures, a List of Tables, an Index.
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="p">What follows is a possible <tt class="tt">bookmap</tt> for this tutorial (contents
+                     of file <a href="src/tutorial-book.ditamap" class="xref" target="_blank"><tt class="filepath">tutorial-book.ditamap</tt></a>):
+                  </div><pre class="pre">&lt;<b class="b">bookmap</b>&gt;
+  &lt;<b class="b">booktitle</b>&gt;
+    &lt;<b class="b">mainbooktitle</b>&gt;DITA for the Impatient&lt;/mainbooktitle&gt;
+  &lt;/booktitle&gt;
+
+  &lt;<b class="b">bookmeta</b>&gt;
+    &lt;<b class="b">authorinformation</b>&gt;
+      &lt;<b class="b">personinfo</b>&gt;...&lt;/personinfo&gt;
+      &lt;<b class="b">organizationinfo</b>&gt;...&lt;/organizationinfo&gt;
+    &lt;/authorinformation&gt;
+    &lt;critdates&gt;
+      &lt;created date="October 7, 2009"/&gt;
+    &lt;/critdates&gt;
+  &lt;/bookmeta&gt;
+
+  &lt;<b class="b">frontmatter</b>&gt;
+    &lt;<b class="b">booklists</b>&gt;
+      &lt;<b class="b">toc</b>/&gt;
+      &lt;<b class="b">figurelist</b>/&gt;
+      &lt;<b class="b">tablelist</b>/&gt;
+    &lt;/booklists&gt;
+  &lt;/frontmatter&gt;
+
+  &lt;<b class="b">chapter</b> href="introduction.dita"/&gt;
+  &lt;chapter href="topics_and_maps.dita"/&gt;
+  &lt;chapter href="topic.dita"&gt;
+    &lt;topicref href="topic_structure.dita"&gt;
+      &lt;topicref href="samples/sample_topic.dita" toc="no"/&gt;
+    &lt;/topicref&gt;
+    &lt;topicref href="block_elements.dita"/&gt;
+    &lt;topicref href="inline_elements.dita"/&gt;
+    &lt;topicref href="link_elements.dita"/&gt;
+  &lt;/chapter&gt;
+  .
+  .
+  .
+  &lt;chapter <i class="i">navtitle="Topic maps"</i>&gt;
+    &lt;topicref href="map.dita"/&gt;
+    &lt;topicref href="bookmap.dita"/&gt;
+  &lt;/chapter&gt;
+  &lt;chapter href="conclusion.dita"/&gt;
+&lt;/bookmap&gt;</pre></div>
+               <div class="unordered-members-linkpool">
+                  <p class="link">‣ <span class="parent-topic-link-item">Parent topic: </span><a href="#I_9uu5n_">Topic maps</a></p>
+               </div>
+            </div>
+         </div>
+         <hr class="footnote-separator" />
+         <table border="0" cellspacing="0" cellpadding="0" class="fn-layout">
+            <tr>
+               <td valign="baseline"> <sup class="fn-callout">(1)</sup></td>
+               <td valign="baseline" id="I_d164e209_" class="fn">A less convenient alternative would be to use an
+                  actual <tt class="tt">topic</tt> having no <tt class="tt">body</tt> at all, just a
+                  <tt class="tt">title</tt>.
+               </td>
+            </tr>
+         </table>
+         <div class="page-navigation-bar">
+            <hr class="page-navigation-bottom-separator" />
+            <table border="0" cellspacing="0" width="100%" class="page-navigation-layout">
+               <tr valign="top">
+                  <td align="left"><a href="index.html" class="navigation-link" title="First page: DITA for the Impatient" accesskey="S"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/first.png" alt="First page" width="16" height="16" /></a></td>
+                  <td align="left"><a href="specialized_topics.html" class="navigation-link" title="Previous page: Specialized topic types" accesskey="P"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/previous.png" alt="Previous page" width="16" height="16" /></a></td>
+                  <td width="25%" align="left"><span class="page-navigation-previous">Specialized topic types</span></td>
+                  <td width="40%" align="center"><span class="page-navigation-current">Topic maps</span> <span class="page-navigation-page">(4 / 5)</span></td>
+                  <td width="25%" align="right"><span class="page-navigation-next">Conclusion</span></td>
+                  <td align="right"><a href="index-3.html" class="navigation-link" title="Next page: Conclusion" accesskey="N"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/next.png" alt="Next page" width="16" height="16" /></a></td>
+                  <td align="right"><a href="index-3.html" class="navigation-link" title="Last page: Conclusion" accesskey="E"><img class="navigation-icon" src="file:/C:/ditac-2_2_1/xsl/xhtml/resources/last.png" alt="Last page" width="16" height="16" /></a></td>
+               </tr>
+            </table>
+         </div>
+      </div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script><script src="http://fancyapps.com/fancybox/source/jquery.fancybox.js" type="text/javascript"></script><script type="text/javascript">
+    $(document).ready(function(){ /* standard jquery stuff from w3school */
+    //  $("div.fig").hide();
+      $("button").click(function(){
+        $("div.fig").slideToggle();
+        $("div.info").slideToggle();
+        $("div.tutorialinfo").slideToggle();
+        $("div.stepxmp").slideToggle();
+        $("div.stepresult").slideToggle();
+        $("ol.substeps").slideToggle();
+        $("ul.choices").slideToggle();
+      });
+
+      /* from fancybox page ref to http://jsfiddle.net/47xjk/  */
+      $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox({
+            padding : 0,
+//            prevEffect   : 'elastic',
+            openEffect  : 'elastic',
+//            nextEffect    : 'elastic'
+
+    });  
+      // JHE: should be possible to loose the .attr('rel', 'gallery') part now because its handled in body.xsl
+    });
+    </script></body>
+</html>
