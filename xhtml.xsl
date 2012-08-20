@@ -77,6 +77,12 @@
         <div class="navbar navbar-fixed-top">
           <div class="navbar-inner">
             <div class="container">
+              <xsl:variable name="product" select="//@product"/>
+              <xsl:if test="$product != ''">
+                <a class="brand" href="./">
+                  <xsl:value-of select="$product"/>
+                </a>
+              </xsl:if>
               <p>
                 <button class="btn btn-inverse pull-right">Toggle: Just facts/details</button> 
               </p>
