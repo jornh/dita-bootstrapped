@@ -1,5 +1,5 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-	            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:u="http://www.xmlmind.com/namespace/ditac"
                 xmlns:ditac="http://www.xmlmind.com/ditac/schema/ditac"
@@ -9,18 +9,8 @@
   <xsl:import href="ditac-xsl:xhtml/xhtml.xsl"/>
   <xsl:import href="ditac-xsl:xhtml/task.xsl"/>
 
-
-
-
-<!-- <xsl:import href="customize-html-helper.xsl"/> -->
-
-<!-- <xsl:template match="//tutorialinfo[@class='- topic/itemgroup task/tutorialinfo ']"> -->
-  <!-- <xsl:comment>at tutorialinfo </xsl:comment> -->
-<!-- <xsl:template match="//tutorialinfo | //info | //fig | //stepresult ">
-	<xsl:message>at tut</xsl:message>
-</xsl:template>
- -->
-
+  <xsl:param name="brand-name" select="'DITA-Bootstrapped'"/>
+  <xsl:param name="brand-href" select="'/'"/>
 
 
 <!-- from ditac_chunk.xsl -->
@@ -77,10 +67,10 @@
         <div class="navbar navbar-fixed-top">
           <div class="navbar-inner">
             <div class="container">
-              <xsl:variable name="product" select="//@product"/>
-              <xsl:if test="$product != ''">
-                <a class="brand" href="./">
-                  <xsl:value-of select="$product"/>
+              <xsl:if test="$brand-name != ''">
+                <a class="brand">
+                  <xsl:attribute name="href" select="$brand-href" />
+                  <xsl:value-of select="$brand-name"/>
                 </a>
               </xsl:if>
               <p>
