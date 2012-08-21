@@ -46,7 +46,8 @@
 <!-- JHE TODO XXX TBD temp remove addition -->
         <!-- <xsl:call-template name="cssMeta"/> -->
 <!-- JHE addition -->
-<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="http://fancyapps.com/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
 
     <style type="text/css">
@@ -74,7 +75,7 @@
                 </a>
               </xsl:if>
               <p>
-                <button class="btn btn-inverse pull-right">Toggle: Just facts/details</button> 
+                <button class="btn btn-inverse pull-right" title="Currently only meaningful on the 'task' type">Toggle: Just facts/details</button> 
               </p>
             </div>
           </div>
