@@ -46,7 +46,7 @@
 <!-- JHE TODO XXX TBD temp remove addition -->
         <!-- <xsl:call-template name="cssMeta"/> -->
 <!-- JHE addition -->
-<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css" rel="stylesheet" />
+<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap.min.css" rel="stylesheet" />
 <link href="http://fancyapps.com/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
 
     <style type="text/css">
